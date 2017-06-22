@@ -70,3 +70,4 @@ theme: landscape
 deploy:
   type: git
   repo: git@github.com:bayo-jsc/bayo-jsc.github.io.git
+  branch: master
