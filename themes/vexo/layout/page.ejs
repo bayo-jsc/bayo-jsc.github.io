@@ -14,26 +14,6 @@
         <%- partial('_partial/tag', { tags: page.tags }) %>
       </div>
     <% } %>
-    <div class="money-like">
-      <div class="reward-btn">
-        赏
-        <span class="money-code">
-          <span class="alipay-code">
-            <div class="code-image"></div>
-            <b>使用支付宝打赏</b>
-          </span>
-          <span class="wechat-code">
-            <div class="code-image"></div>
-            <b>使用微信打赏</b>
-          </span>
-        </span>
-      </div>
-      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
-    </div>
-    <div class="qrcode">
-      <canvas id="share-qrcode"></canvas>
-      <p class="notice">扫描二维码，分享此文章</p>
-    </div>
     <div id="comments"></div>
   </article>
 </main>
@@ -46,7 +26,7 @@
 
      // error image
     $(".markdown-content img").on('error', function() {
-      $(this).attr('src', 'http://file.muyutech.com/error-img.png') 
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
     })
 
     // zoom image
@@ -54,7 +34,7 @@
       var src = $(this).attr('src')
       var imageW = $(this).width()
       var imageH = $(this).height()
-      
+
       var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
       zoom = zoom < 1 ? 1 : zoom
       zoom = zoom > 2 ? 2 : zoom
