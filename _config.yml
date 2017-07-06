@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bayo Engineering Blog 
+title: Bayo Engineering
 subtitle:
 description:
 author: Bayo JSC
 language: English
-timezone: 
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://blog.bayo.vn
+url: https://bayo.vn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -26,7 +26,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-include: 
+include:
  - CNAME
 
 # Writing
@@ -65,8 +65,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-#theme: landscape
-theme: prontera
+theme: vexo
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -74,5 +73,3 @@ deploy:
   type: git
   repo: git@github.com:bayo-jsc/bayo-jsc.github.io.git
   branch: master
-
-
