@@ -14,21 +14,8 @@
         <%- partial('_partial/tag', { tags: page.tags }) %>
       </div>
     <% } %>
-    <div id=vuukle-emote></div>
+    
     <div id=vuukle_div></div>
-    <script src=http://vuukle.com/js/vuukle.js type=text/javascript></script>
-    <script type=text/javascript>
-      var VUUKLE_CUSTOM_TEXT = '{ "rating_text": "Give a rating:", "comment_text_0": "Leave a comment", "comment_text_1": "comment", "comment_text_multi": "comments", "stories_title": "<%- page.title %>" }';
-      var UNIQUE_ARTICLE_ID = "<%- page.path %>";
-      var SECTION_TAGS = "<%- partial('_partial/tag', { tags: page.tags }) %>";
-      var ARTICLE_TITLE = "<%- page.title %>";
-      var GA_CODE = "UA-123456";
-      var VUUKLE_API_KEY = "f9bd7909-b0ed-487d-a4ca-2046263b33b8";
-      var TRANSLITERATE_LANGUAGE_CODE = "en";
-      var VUUKLE_COL_CODE = "148aa3";
-      var ARTICLE_AUTHORS = btoa(encodeURI('[{"name": "Bayo JSC", "email":"bayo-tech@googlegroups.com","type": "internal"}]'));
-      create_vuukle_platform(VUUKLE_API_KEY, UNIQUE_ARTICLE_ID, "0", SECTION_TAGS, ARTICLE_TITLE, TRANSLITERATE_LANGUAGE_CODE, "1", "", GA_CODE, VUUKLE_COL_CODE, ARTICLE_AUTHORS);
-    </script>
   </article>
 </main>
 
@@ -74,5 +61,19 @@
       value: document.location.href
     });
   })();
+</script>
+
+<script src=http://vuukle.com/js/vuukle.js type=text/javascript></script>
+<script type=text/javascript>
+  var VUUKLE_CUSTOM_TEXT = '{ "rating_text": "Give a rating:", "comment_text_0": "Leave a comment", "comment_text_1": "comment", "comment_text_multi": "comments", "stories_title": "<%- page.title %>" }';
+  var UNIQUE_ARTICLE_ID = "<%- page.path %>";
+  var SECTION_TAGS = "<%- partial('_partial/tag', { tags: page.tags }) %>";
+  var ARTICLE_TITLE = "<%- page.title %>";
+  var GA_CODE = "UA-123456";
+  var VUUKLE_API_KEY = "f9bd7909-b0ed-487d-a4ca-2046263b33b8";
+  var TRANSLITERATE_LANGUAGE_CODE = "en";
+  var VUUKLE_COL_CODE = "148aa3";
+  var ARTICLE_AUTHORS = btoa(encodeURI('[{"name": "Bayo JSC", "email":"bayo-tech@googlegroups.com","type": "internal"}]'));
+  create_vuukle_platform(VUUKLE_API_KEY, UNIQUE_ARTICLE_ID, "0", SECTION_TAGS, ARTICLE_TITLE, TRANSLITERATE_LANGUAGE_CODE, "1", "", GA_CODE, VUUKLE_COL_CODE, ARTICLE_AUTHORS);
 </script>
 
