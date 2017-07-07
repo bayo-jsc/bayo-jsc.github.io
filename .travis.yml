@@ -22,3 +22,5 @@ deploy:
   on:
     branch: dev
     
+notifications:
+  email: false
