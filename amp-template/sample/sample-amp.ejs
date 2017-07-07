@@ -1,0 +1,362 @@
+<!doctype html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="<%= config.url %>/<%= post.path %>index.html" >
+    <title><%= post.title %> | <%= config.title %></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  	<script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <% if (isVimeoContain){ %>
+    <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
+    <% } %>
+    <% if (isVideoContain){ %>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <% } %>
+    <% if (isYoutubeContain){ %>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <% } %>
+    <% if (isTwitterContain){ %>
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+    <% } %>
+    <% if (isInstagramContain){ %>
+    <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+    <% } %>
+    <% if (isSoundCloudContain){ %>
+    <script async custom-element="amp-soundcloud" src="https://cdn.ampproject.org/v0/amp-soundcloud-0.1.js"></script>
+    <% } %>
+    <% if (isIframeContain){ %>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <% } %>
+    <% if (config.generator_amp.substituteGoogle_adsense && config.generator_amp.substituteGoogle_adsense.data_ad_client && config.generator_amp.substituteGoogle_adsense.data_ad_slot && config.generator_amp.substituteGoogle_adsense.width && config.generator_amp.substituteGoogle_adsense.height){ %>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <% } %>
+    <% if (config.generator_amp.google_analytics){ %>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <% } %>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "BlogPosting",
+			"headline": "<%= post.title %>",
+			<% if (post.description){ %>
+			"description": "<%= post.description %>",
+			<% } else if (post.excerpt){ %>
+			"description": "<%= post.excerpt %>",
+			<% } %>
+			"mainEntityOfPage":{
+			    "@type":"WebPage",
+			    "@id":"<%= config.url %>/<%= post.path %>"
+			},
+			"datePublished": "<%= post.date.toISOString() %>",
+			"dateModified": "<%= post.updated.toISOString() %>",
+			<% if (post.eyeCatchImage && post.eyeCatchImage != "" && post.eyeCatchImageProperty && post.eyeCatchImageProperty.width && post.eyeCatchImageProperty.height){ %>
+			"image": {
+				"@type": "ImageObject",
+				"url": "<%= post.titleImageForAmp %>",
+				"width" : "<%= post.eyeCatchImageProperty.width %>",
+				"height" : "<%= post.eyeCatchImageProperty.height %>"
+			},
+			<% } %>
+			"author": {
+			    "@type": "Person",
+			    "name": "<%= config.author %>"
+			},
+			"publisher": {
+			    "@type": "Organization",
+			    "name": "<%= config.title %>"
+			    <% if (config.generator_amp.logo.height && config.generator_amp.logo.width && config.generator_amp.logo.height){ %>
+			    ,
+			    "logo": {
+			      "@type": "ImageObject",
+			      "url": "<%= logoPathForAmp %>",
+			      "width": <%= config.generator_amp.logo.width %>,
+			      "height": <%= config.generator_amp.logo.height %>
+			    }
+			    <% } %>
+			}
+		}
+	</script>
+	<% if (cssTxt != ""){ %>
+	<style amp-custom>
+		<%- cssTxt %>
+	</style>
+	<% } %>
+  </head>
+  <body>
+  	
+  	
+  	<!-- google analytics -->
+  	<% if (config.generator_amp.google_analytics){ %>
+  	<amp-analytics type="googleanalytics" id="google-analytics">
+		<script type="application/json">
+		{
+		  "vars": {
+		    "account": "<%- config.generator_amp.google_analytics %>"
+		  },
+		  "triggers": {
+		    "trackPageview": {
+		      "on": "visible",
+		      "request": "pageview"
+		    }
+		  }
+		}
+		</script>
+	</amp-analytics>
+	<% } %>
+  	
+  	
+  	<!-- menu -->
+  	<header>
+  		<div class="nav-container">
+	  		<div class="left-nav">
+	  			<div class="header-title">
+	  				<a href="<%- config.root %>"><%= config.title %></a>
+	  			</div>
+	  		</div>
+	  		<div class="right alt">
+	  			<button on='tap:sidebar.toggle' class="tab hamburger"></button>
+	  		</div>
+	  	</div>
+    </header>
+  	
+  	
+  	<!-- sidebar -->
+  	<amp-sidebar id='sidebar' layout="nodisplay" side="left">
+      <ul>
+      	<!--
+      		To use the menu, add the menu option of _config.yml.
+      		
+      		generator_amp:
+      		  theme:
+			    menu:
+			      diary: /categories/diary/
+			      gallery: /categories/archive-gallery
+			      archives: /archives
+      	-->
+        <li><a href="/">Home</a></li>
+        <% if( config.generator_amp && config.generator_amp.theme && config.generator_amp.theme.menu ){ %>
+			<% for (var i in config.generator_amp.theme.menu){ %>
+				<li><a href="<%- config.generator_amp.theme.menu[i] %>"><%= i %></a></li>
+			<% } %>
+		<% } %>
+      </ul>
+    </amp-sidebar>
+  	
+  	
+  	<!-- container -->
+  	<div id="container">
+	  	<div id="main">
+		    <article id="<%= post.layout %>-<%= post.slug %>" class="post">
+		    
+		    	<!-- entry title -->
+				<div class="title-cover">
+					<div class="entry-header">
+						<% if (post.link){ %>
+						  <h1 itemprop="name" class="entry-title">
+						    <a class="article-title" href="<%- post.link %>" target="_blank" itemprop="url"><%= post.title %></a>
+						  </h1>
+						<% } else if (post.title){ %>
+						  <h1 class="article-title entry-title" itemprop="name">
+						    <a href="<%- config.url %>/<%- post.path %>" target="_blank" itemprop="url"><%= post.title %></a>
+						  </h1>
+						<% } %>
+					</div>
+					
+					<!-- datePublished -->
+					<div class="entry-meta-header">
+						<span class="meta-elements date">
+							<time datetime="<%= datePublished %>" itemprop="datePublished"><%= datePublished %></time>
+						</span>
+					</div>
+				</div>
+				
+				<!-- entry content -->
+			    <div class="entry-content ecp">
+			    
+			    
+			    	<!-- social share button -->
+			    	<!--
+			      		To use the facebook button, add the facebook_app_id option of _config.yml.
+			      		
+			      		generator_amp:
+			      		  theme:
+    						facebook_app_id: 123456789
+			      	-->
+			    	<div class="social-share">
+			    		<amp-social-share type="twitter" width="40" height="40"></amp-social-share>
+			    		<% if( config.generator_amp && config.generator_amp.theme && config.generator_amp.theme.facebook_app_id ){ %>
+			    			<amp-social-share type="facebook" width="40" height="40" data-param-app_id="<%- config.generator_amp.theme.facebook_app_id %>" data-param-text="" data-param-href="<%= config.url %>/<%= post.path %>"></amp-social-share>
+			    		<% } %>
+			    		<!--
+			    		<amp-social-share type="pinterest" width="40" height="40"></amp-social-share>
+			    		-->
+			    		<amp-social-share type="gplus" width="40" height="40"></amp-social-share>
+			    		<!--
+			    		<amp-social-share type="tumblr" width="40" height="40"></amp-social-share>
+			    		<amp-social-share type="whatsapp" width="40" height="40"></amp-social-share>
+			    		<amp-social-share type="linkedin" width="40" height="40"></amp-social-share>
+			    		<amp-social-share type="email" width="40" height="40"></amp-social-share>
+			    		-->
+			    	</div>
+			    	
+			    	
+			    	<!-- content -->
+			  		<%- content %>
+			  		
+			  		
+			  		<!-- google Adsense -->
+			  		<% if (config.generator_amp.substituteGoogle_adsense && config.generator_amp.substituteGoogle_adsense.data_ad_client && config.generator_amp.substituteGoogle_adsense.data_ad_slot && config.generator_amp.substituteGoogle_adsense.width && config.generator_amp.substituteGoogle_adsense.height){ %>
+			  		<div class="ad-footer">
+			  			<amp-ad layout="responsive"	width="<%- config.generator_amp.substituteGoogle_adsense.width %>" height="<%- config.generator_amp.substituteGoogle_adsense.height %>" type="adsense" data-ad-client="<%- config.generator_amp.substituteGoogle_adsense.data_ad_client %>" data-ad-slot="<%- config.generator_amp.substituteGoogle_adsense.data_ad_slot %>">
+						</amp-ad>
+					</div>
+					<% } %>
+					
+			  	</div>
+				
+		  	</article>
+		  	
+		  	
+		  	<!-- meta (categories , tags) -->
+		  	<% if ( (post.categories && post.categories.length) || (post.tags && post.tags.length) ){ %>
+		  	<div class="meta-content">
+		  	
+		  		<% if (post.categories && post.categories.length){ %>
+		  		<div class="meta-wrapper">
+				  	<h6 class="categories">Category</h6>
+				  	<div class="article-categories">
+						<ul class="article-categories-list">
+							<% post.categories.data.forEach(function(item){ %>
+					    		<li class="article-categories-list-item">
+					    			<a class="article-categories-list-link" href="/<%- item.path %>" class="link-gaTrack" data-linkType="link-categories">
+					    				<%- item.name %>
+					    			</a>
+					    		</li>
+							<% }); %>
+						</ul>
+					</div>
+				</div>
+				<% } %>
+				
+				<% if (post.tags && post.tags.length){ %>
+				<div class="meta-wrapper">
+				  	<h6 class="tag">Tag</h6>
+				  	<div class="article-tag">
+						<ul class="article-tag-list">
+							<% post.tags.data.forEach(function(item){ %>
+					    		<li class="article-tag-list-item">
+					    			<a class="article-tag-list-link" href="/<%- item.path %>" class="link-gaTrack" data-linkType="link-tag">
+					    				<%- item.name %>
+					    			</a>
+					    		</li>
+							<% }); %>
+						</ul>
+					</div>
+				</div>
+				<% } %>
+			</div>
+		  	<% } %>
+		  	
+		  	<!-- article nav -->
+		  	<% if (post.prev || post.next){ %>
+			<nav id="article-nav">
+			  <% if (post.prev){ %>
+			  <a href="<%- config.root %><%- post.prev.path %>" id="article-nav-newer" class="article-nav-link-wrap">
+			    <strong class="article-nav-caption">Newer</strong>
+			    <div class="article-nav-title">
+			      <% if (post.prev.title){ %>
+			        <%= post.prev.title %>
+			      <% } else { %>
+			        (no title)
+			      <% } %>
+			    </div>
+			  </a>
+			  <% } %>
+			  <% if (post.next){ %>
+			  <a href="<%- config.root %><%- post.next.path %>" id="article-nav-older" class="article-nav-link-wrap">
+			    <strong class="article-nav-caption">Older</strong>
+			    <div class="article-nav-title">
+			      <% if (post.next.title){ %>
+			        <%= post.next.title %>
+			      <% } else { %>
+			        (no title)
+			      <% } %>
+			    </div>
+			  </a>
+			  <% } %>
+			</nav>
+			<% } %>
+			
+		</div>
+		
+		
+		<footer id="footer">
+		
+			<% if (config.author && config.authorDetail ){ %>
+			<div class="site-author-info">
+				<div class="site-author-info-wrapper">
+				
+					<% if (config.authorDetail && config.authorDetail.avatar && config.authorDetail.avatar.path && config.authorDetail.avatar.width && config.authorDetail.avatar.height ){ %>
+					<div class="gravatar-wrapper">
+						<div class="gravatar-area">
+							<amp-img alt="gravatar" layout="responsive" class="circle responsive-img" src="<%= avatarPath %>" width="<%= config.authorDetail.avatar.width %>" height="<%= config.authorDetail.avatar.height %>"></amp-img>
+						</div>
+					</div>
+					<% } %>
+					
+					<% if (config.author ){ %>
+					<div class="authorCap-wrapper">
+						<h6 class="authorCap"><%= config.author %>&nbsp;
+							<% if (config.authorDetail && config.authorDetail.authorReading){ %>
+							<span class="authorReading">(<%= config.authorDetail.authorReading %>)</span>
+							<% } %>
+						</h6>
+						<% if (config.authorDetail && config.authorDetail.description){ %>
+						<p class="site-author-desc">
+							<%= config.authorDetail.description %>
+						</p>
+						<% } %>
+					</div>
+					<% } %>
+					
+				</div>
+			</div>
+			<% } %>
+			
+			
+			
+			<div class="homeLink">
+		  		<a href="/">Home</a>
+		  	</div>
+			
+			
+			<div class="copyright-tool">
+				<div class="copyright-title">
+					<span>
+					&copy; <%= copyrightDate %>&nbsp;<%= config.author || config.title %>
+					</span>
+				</div>
+				<% if (config.copyright_notice){ %>
+				<div class="copyright-notice">
+					<p>
+						<%= config.copyright_notice %>
+					</p>
+				</div>
+				<% } %>
+			</div>
+			
+		</footer>
+		
+		
+	</div>
+	
+	
+  	<div id="totop"><a href="#"></a></div>
+  	
+  	
+  </body>
+</html>
