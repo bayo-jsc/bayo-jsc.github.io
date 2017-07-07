@@ -11,10 +11,11 @@ language: English
 timezone:
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://bayo.vn
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'      
+    
+url: http://blog.bayo.vn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :title/
 permalink_defaults:
 
 # Directory
