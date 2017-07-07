@@ -11,8 +11,3 @@ yarn
 ```
 yarn server
 ```
-
-## Deploy
-```
-yarn deploy
-```
