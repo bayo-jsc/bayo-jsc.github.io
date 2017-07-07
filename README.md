@@ -5,10 +5,10 @@ yarn
 
 ## Development
 ```
-node_modules/hexo/bin/hexo server
+hexo server
 ```
 
 ## Deploy
 ```
-node_modules/hexo/bin/hexo generate --deploy
+hexo generate --deploy
 ```
