@@ -5,10 +5,10 @@ yarn
 
 ## Development
 ```
-hexo server
+yarn server
 ```
 
 ## Deploy
 ```
-hexo generate --deploy
+yarn deploy
 ```
