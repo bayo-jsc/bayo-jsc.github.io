@@ -14,5 +14,15 @@ before_script:
     - git config --global user.email 'quocanh96@gmail.com'
 
 script:
-    - yarn deploy
+    - yarn hexo generate
+
+after_success:
+    - mkdir .deploy
+    - cd .deploy
+    - git init
+    - git remote add origin $DEPLOY_REPO
+    - cp -r ../public/* .
+    - git add -A .
+    - git commit -m 'Site updated'
+    - git push --force --quiet origin master
     
