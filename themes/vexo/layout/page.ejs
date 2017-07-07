@@ -14,7 +14,28 @@
         <%- partial('_partial/tag', { tags: page.tags }) %>
       </div>
     <% } %>
-    <div id="comments"></div>
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        /*
+        var disqus_config = function () {
+            this.page.url = '<%- page.permalink %>';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '<%- page.title %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+            var d = document, s = d.createElement('script');
+
+            s.src = '//bayo-engineering.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
   </article>
 </main>
 
@@ -59,31 +80,7 @@
       element: document.getElementById('share-qrcode'),
       value: document.location.href
     });
-
-    // gitment
-    var gitmentConfig = "<%= theme['gitment_owner'] %>";
-    if (gitmentConfig != "undefined") {
-      var gitment = new Gitment({
-        owner: "<%= theme['gitment_owner'] %>",
-        repo: "<%= theme['gitment_repo'] %>",
-        oauth: {
-          client_id: "<%= theme['gitment_oauth_id'] %>",
-          client_secret: "<%= theme['gitment_oauth_secret'] %>"
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
   })();
 </script>
+<script id="dsq-count-scr" src="//EXAMPLE.disqus.com/count.js" async></script>
+
