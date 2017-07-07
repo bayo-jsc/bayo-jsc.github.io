@@ -73,3 +73,16 @@ deploy:
   type: git
   repo: git@github.com:bayo-jsc/bayo-jsc.github.io.git
   branch: master
+
+generator_amp:
+  templateDir:  amp-template
+  assetDistDir: amp-dist
+  logo:
+    path:   https://static.bayo.vn/icon/applogo-256.png
+    width:  256
+    height: 256
+  substituteTitleImage: 
+    path:   sample/sample-substituteTitleImage.png
+    width:  1024
+    height: 800
+  warningLog: true
