@@ -7,7 +7,7 @@ before_install:
     - greenkeeper-lockfile-update
 
 install:
-    - yarn 
+    - yarn --frozen-lockfile
     
 after_script: greenkeeper-lockfile-upload
 
