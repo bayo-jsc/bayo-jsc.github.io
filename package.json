@@ -30,7 +30,7 @@
     "hexo-offline": "^0.2.2",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-jade": "^0.4.1",
-    "hexo-renderer-marked": "^0.2.10",
+    "hexo-renderer-marked": "^0.2.11",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0"
   },
