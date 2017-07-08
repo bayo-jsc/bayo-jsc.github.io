@@ -94,14 +94,24 @@ sitemap:
 nofollow:
 	enable: true
 	exclude:
+    - http://blog.bayo.vn
+    - blog.bayo.vn
     - www.bayo.vn
 
 autolinker:
   enable: true
   newWindow: true
-  urls: true
+  urls: false
   email: true
   tel: true
   twitter: true
 
+offline:
+  maximumFileSizeToCacheInBytes: 5242880
+  staticFileGlobs:
+  - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+  stripPrefix: public
+  verbose: false
 
+math:
+  engine: 'mathjax'
