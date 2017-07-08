@@ -32,7 +32,8 @@
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.3",
-    "hexo-server": "^0.2.1"
+    "hexo-server": "^0.2.1",
+    "hexo-util": "^0.6.0"
   },
   "engines": {
     "node": ">=8.1.3"
