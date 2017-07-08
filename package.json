@@ -11,6 +11,7 @@
     "hexo": "hexo"
   },
   "dependencies": {
+    "dtrace-provider": "^0.8.3",
     "hexo": "^3.2.0",
     "hexo-autolinker": "^1.0.1",
     "hexo-autonofollow": "^1.0.1",
