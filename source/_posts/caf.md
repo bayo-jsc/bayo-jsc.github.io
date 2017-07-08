@@ -4,7 +4,7 @@ title: CAF dataset, over 8.000 faces of famous actresses
 
 We now public the CAF (stands for **C**ropped **A**ctresses' **F**aces) dataset includes 8303 images of famous actresses' faces.
 
-![caf](https://i.ytimg.com/vi/6cYttFUJQhA/maxresdefault.jpg)
+![caf](http://i.imgur.com/qJbd8Ig.jpg)
 
 ## Characteristic
 
@@ -32,9 +32,9 @@ The CAF dataset is for research purposes, we do not have any copyright of the im
 
 If you use CAF dataset for your research, please cite:
 
-> [Hiep Pham](https://github.com/hiepph), [Dung Nguyen Thien](https://github.com/pexea12), *CAF dataset - over 8.000 faces of famous actresses*, 2017. https://blog.bayo.vn/caf/
+> [Hiep Pham](https://github.com/hiepph), [Dung Nguyen Pham Thien](https://github.com/pexea12), *CAF dataset - over 8.000 faces of famous actresses*, 2017. https://blog.bayo.vn/caf/
 
 ## Contacts
 
 + Hiep Pham: **hiepph[at]bayo.vn**
-+ Dung Nguyen Thien: **dungnt[at]bayo.vn**
++ Dung Nguyen Pham Thien: **dungnt[at]bayo.vn**
