@@ -90,3 +90,10 @@ generator_amp:
 
 sitemap:
   path: sitemap.xml
+
+nofollow:
+	enable: true
+	exclude:
+    - www.bayo.vn
+
+

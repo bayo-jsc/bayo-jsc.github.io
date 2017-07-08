@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "hexo": "^3.2.0",
+    "hexo-autonofollow": "^1.0.1",
     "hexo-cli-extras": "^1.0.4",
     "hexo-deployer-git": "^0.3.0",
     "hexo-generator-amp": "^3.0.2",
