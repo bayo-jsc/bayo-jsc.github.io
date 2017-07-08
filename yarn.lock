@@ -871,7 +871,7 @@ dot-prop@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
-dtrace-provider@^0.8.3, dtrace-provider@~0.8:
+dtrace-provider@~0.8:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/dtrace-provider/-/dtrace-provider-0.8.3.tgz#ba1bfc6493285ccfcfc6ab69cd5c61d74c2a43bf"
   dependencies:
