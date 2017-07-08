@@ -96,4 +96,12 @@ nofollow:
 	exclude:
     - www.bayo.vn
 
+autolinker:
+  enable: true
+  newWindow: true
+  urls: true
+  email: true
+  tel: true
+  twitter: true
+
 
