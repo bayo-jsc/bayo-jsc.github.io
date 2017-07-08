@@ -36,5 +36,5 @@ If you use CAF dataset for your research, please cite:
 
 ## Contacts
 
-+ Hiep Pham: **hiepph@bayo.vn**
-+ Dung Nguyen Thien: **dungnt@bayo.vn**
++ Hiep Pham: **hiepph[at]bayo.vn**
++ Dung Nguyen Thien: **dungnt[at]bayo.vn**
