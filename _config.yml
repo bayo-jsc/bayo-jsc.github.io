@@ -87,3 +87,6 @@ generator_amp:
     width:  1024
     height: 800
   warningLog: true
+
+sitemap:
+  path: sitemap.xml
