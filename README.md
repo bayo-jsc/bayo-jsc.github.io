@@ -5,10 +5,10 @@
 
 ## Installation
 ```
-yarn
+npm install 
 ```
 
 ## Development
 ```
-yarn server
+npm run server
 ```
