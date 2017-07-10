@@ -5,10 +5,10 @@
 # Site
 title: Bayo Engineering
 subtitle:
-description:
-author: Bayo JSC
+description: Everyday life of Bayo Engineering
+author: Bayo
 language: English
-timezone:
+timezone: Asia/Ho_Chi_Minh
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'      
@@ -92,8 +92,8 @@ sitemap:
   path: sitemap.xml
 
 nofollow:
-	enable: true
-	exclude:
+  enable: true
+  exclude:
     - http://blog.bayo.vn
     - blog.bayo.vn
     - www.bayo.vn
