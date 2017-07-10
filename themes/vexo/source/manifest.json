@@ -1,1 +1,50 @@
-{}
+{
+  "name": "Bayo Engineering",
+  "short_name": "Bayo Engineering",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "description": "Everyday life of Bayo Engineering",
+  "icons": [
+    {
+      "src": "https://static.bayo.vn/icon/applogo-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "https://static.bayo.vn/icon/applogo-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
