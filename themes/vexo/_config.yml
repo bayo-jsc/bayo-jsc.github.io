@@ -6,8 +6,8 @@ excerpt_link: More...
 
 menu:
  Posts: /
- About: /about/
  Projects: /project/
+ About: /about/
 
 # highlight
 highlight:
@@ -15,6 +15,6 @@ highlight:
 
 about:
   banner: http://file.muyutech.com/about.jpg
-  avatar: /images/avatar.png
+  avatar: https://static.bayo.vn/icon/applogo-256.png
   description: Everyday life of Bayo Engineering
 
