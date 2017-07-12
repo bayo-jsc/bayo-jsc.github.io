@@ -1,6 +1,12 @@
 <div id="article-banner">
   <h2><%- page.title %></h2>
-  <p class="post-date"><%- page.author %></p>
+  <% if (page.author && page.author.length) { %>
+    <p class="post-date">
+      <a href="https://github.com/<%- page.author %>" target="_blank">
+        @<%- page.author %>
+      </a>
+    </p>
+  <% } %>
   <p class="post-date"><%- date(page.date, "YYYY-MM-DD") %></p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
