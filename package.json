@@ -15,7 +15,7 @@
     "hexo-autolinker": "^1.0.1",
     "hexo-autonofollow": "^1.0.1",
     "hexo-cli-extras": "^1.0.4",
-    "hexo-deployer-git": "^0.3.0",
+    "hexo-deployer-git": "^1.0.0",
     "hexo-filter-author-from-git": "^0.1.1",
     "hexo-filter-date-from-git": "^0.1.2",
     "hexo-generator-amp": "^3.0.2",
