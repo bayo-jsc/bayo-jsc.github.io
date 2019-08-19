@@ -33,7 +33,7 @@
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.0",
-    "hexo-util": "^0.6.0"
+    "hexo-util": "^1.0.0"
   },
   "engines": {
     "node": ">=8.1.3",
