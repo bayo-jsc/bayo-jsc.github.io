@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Bayo Engineering</title>
+  <icon>https://www.gravatar.com/avatar/cbb1c947f2227e50a3eb8ef14b9ae76f</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.bayo.vn/"/>
+  <updated>2017-07-08T16:05:39.000Z</updated>
+  <id>http://blog.bayo.vn/</id>
+  
+  <author>
+    <name>Bayo</name>
+    <email>bayo-tech@googlegroups.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CAF dataset, over 8.000 faces of famous actresses</title>
+    <link href="http://blog.bayo.vn/caf/"/>
+    <id>http://blog.bayo.vn/caf/</id>
+    <published>2017-07-08T14:05:09.000Z</published>
+    <updated>2017-07-08T16:05:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>We now public the CAF (stands for <strong>C</strong>ropped <strong>A</strong>ctresses’ <strong>F</strong>aces) dataset includes 8303 images of famous actresses’ faces.</p><p><img src="http://i.imgur.com/qJbd8Ig.jpg" alt="caf"></p><h2 id="Characteristic"><a href="#Characteristic" class="headerlink" title="Characteristic"></a>Characteristic</h2><ul><li><p>Each image is a face of one famous actress. One actress may have some vary quantities of images.</p></li><li><p>Each image has the size of 512x512 (square), and is RGB color mode.</p></li><li><p>Each image is labeled with name of the actress plus one unique id, e.g. <code>Gal_Gadot_0_7.jpg</code>.</p></li></ul><h2 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h2><ul><li><p>We crawled 10.000 images from Google Images, select first 8 pics of each actress.</p></li><li><p>We use <code>dlib</code> to detect faces then crop. But because <code>dlib</code> only detects faces, so in order to include hair, neck, … we have to extend the boundary of images to 1.5 times larger.</p></li><li><p>Lastly, we preprocess by hand and eyes, to check for bad quality or ugly images and remove them.</p></li></ul><h2 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h2><p>The CAF dataset is for research purposes, we do not have any copyright of the images.</p><h2 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h2><p><a href="https://drive.google.com/file/d/0Bz1EQO3FGCUbZWM0N1dlVXc3Yzg/view" rel="external nofollow noopener noreferrer" target="_blank">Google Drive</a> [779MB]</p><p>If you use CAF dataset for your research, please cite:</p><blockquote><p><a href="https://github.com/hiepph" rel="external nofollow noopener noreferrer" target="_blank">Hiep Pham</a>, <a href="https://github.com/pexea12" rel="external nofollow noopener noreferrer" target="_blank">Dung Nguyen Pham Thien</a>, <em>CAF dataset - over 8.000 faces of famous actresses</em>, 2017. <a href="http://blog.bayo.vn/caf/">http://blog.bayo.vn/caf/</a></p></blockquote><h2 id="Contacts"><a href="#Contacts" class="headerlink" title="Contacts"></a>Contacts</h2><ul><li>Hiep Pham: <strong>hiepph[at]bayo.vn</strong></li><li>Dung Nguyen Pham Thien: <strong>dungnt[at]bayo.vn</strong></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;We now public the CAF (stands for &lt;strong&gt;C&lt;/strong&gt;ropped &lt;strong&gt;A&lt;/strong&gt;ctresses’ &lt;strong&gt;F&lt;/strong&gt;aces) dataset includes 8303 imag
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Bayo now has an engineering blog!</title>
+    <link href="http://blog.bayo.vn/hello-world/"/>
+    <id>http://blog.bayo.vn/hello-world/</id>
+    <published>2017-07-08T14:05:09.000Z</published>
+    <updated>2017-07-08T15:49:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>For those who don’t know Bayo, in a nutshell, we provide a travel social network, you can give a <a href="https://bayo.vn" rel="external nofollow noopener noreferrer" target="_blank">try</a> here.</p><p>Beside of everyday job at Bayo, we decide to have something new, an engineering blog, and you’re reading the first post of it.</p><h2 id="But-why"><a href="#But-why" class="headerlink" title="But why?"></a>But why?</h2><p>We are running a great platform, we have some interesting toy projects, and we just want to share it open to the world (soon enough).</p><h2 id="“One-small-step-for-man-one-giant-leap-for-mankind”"><a href="#“One-small-step-for-man-one-giant-leap-for-mankind”" class="headerlink" title="“One small step for man, one giant leap for mankind”"></a>“One small step for man, one giant leap for mankind”</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/HCt1BwWE2gA?ecver=1" frameborder="0" allowfullscreen></iframe><p>We all understand that big things start with small beginnings. We just took off, and look for an interesting journey ahead.</p><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">main</span></span>() &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"Hello, world!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;For those who don’t know Bayo, in a nutshell, we provide a travel social network, you can give a &lt;a href=&quot;https://bayo.vn&quot; rel=&quot;external 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
